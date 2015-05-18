@@ -26,6 +26,7 @@ for idx, tr in enumerate(st):
 	tr.detrend('demean')
 	tr.taper(max_percentage=0.05, type='cosine')
 	tr.data = tr.data
+	tr.filter('highpass',freq=1.0)
 	rs = NigamJennings(tr.data,1/tr.stats.sampling_rate,pers,damping=0.5, units="m/s/s")
 	spec, ts, acc, vel, dis = rs.evaluate()
 	fig = plt.figure(1, figsize=(8,8))
