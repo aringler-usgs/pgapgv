@@ -8,6 +8,9 @@ from obspy.signal.trigger import zDetect, plotTrigger
 from response_spectrum import ResponseSpectrum, NigamJennings, plot_response_spectra, plot_time_series
 import sm_utils
 
+
+#Need to add comments to this code
+
 debug = True
 
 files = glob.glob('data/*')
